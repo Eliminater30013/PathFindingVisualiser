@@ -2,7 +2,7 @@ import pygame
 import math
 from queue import PriorityQueue
 
-WIDTH = 800  # width of window
+WIDTH = 600  # width of window
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
 
@@ -90,7 +90,7 @@ class Spot:
         if self.col < self.total_rows - 1 and not grid[self.row][self.col + 1].is_barrier():  # check right
             self.neighbours.append(grid[self.row][self.col + 1])
 
-        if self.row > 0 and not grid[self.row][self.col - 1].is_barrier():  # check left
+        if self.col > 0 and not grid[self.row][self.col - 1].is_barrier():  # check left
             self.neighbours.append(grid[self.row][self.col - 1])
 
     def __lt__(self, other):
