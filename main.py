@@ -3,6 +3,7 @@ import math
 from queue import PriorityQueue
 
 WIDTH = 600  # width of window
+ROWS = 30  # number of rows + column of size WIDTH/ROW - Makes a square grid
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
 
@@ -184,7 +185,6 @@ def get_clicked_pos(pos, rows, width):
 
 
 def main(win, width):
-    ROWS = 50
     grid = make_grid(ROWS, width)
     start = None
     end = None
