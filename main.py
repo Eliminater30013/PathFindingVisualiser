@@ -1,7 +1,10 @@
 import pygame
 import math
 from queue import PriorityQueue
-
+'''
+Press C on the keyboard to clear grid once algorithm is finished. Left click to delete individual spots 
+and right click to place spots.
+'''
 WIDTH = 600  # width of window
 ROWS = 30  # number of rows + column of size WIDTH/ROW - Makes a square grid
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
